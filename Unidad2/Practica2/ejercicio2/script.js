@@ -18,6 +18,7 @@ console.log(area);
 const aleatorio=Math.floor(Math.random()*19)+1;
 console.log(area*aleatorio);
 //g
-if(Number.isFinite(radio))
+if(Number.isFinite(radio)){
 area=(pi*(radio**2));
 console.log(area);
+}
