@@ -10,10 +10,7 @@
  */
 
 function comprobarnota(nota) {
-    if(nota.trim()===""){
-        return false;
-    }
-    return !isNaN(nota)&& nota>=0 && nota<=10;
+    return !isNaN(nota)&& nota>=0 && nota<=10 && nota!==null&&nota!=undefined &&nota!=="";
 }
 
 function clasificarnota(nota){
@@ -55,7 +52,7 @@ if (notas.length===0) {
 }else{
     //He decidio no poner min y max como literal porque solo los voy a llamar una vez
     console.log(
-        "Informe notas\n"+
+        "-------------Informe notas------------\n"+
         "Número de notas: "+notas.length+"\n"+
         "Media: "+media(...notas).toFixed(2)+"\n"+
         "Nota máxima: "+Math.max(...notas)+"\n"+

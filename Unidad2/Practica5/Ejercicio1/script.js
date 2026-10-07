@@ -32,7 +32,7 @@ console.log(array2.toString());
 function buscar(palabra,array) {
     if(array.findIndex((texto)=>texto===palabra)!=undefined){
         console,log(array.findIndex((texto)=>texto===palabra));
-    }else console.log("No esta el la lista );`
+    }else console.log("No esta el la lista ");  
     
 }
 buscar("sol",lista);
