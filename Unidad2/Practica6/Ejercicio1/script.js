@@ -20,37 +20,23 @@
  * además de los datos inválidos al crear un libro.
  */
 
-class Libro {
-    construtor(titulo,autor,paginas) {
-        if (titulo=== "" || titulo=== null || titulo=== undefined) {
-            throw new Error("Titulo no puede estar vacio");
-        }
-        if (autor===""|| autor===null || autor === undefined) {
-            throw new Error("Autor no puede estar vacio");
-        }
-        if (isNaN(paginas) || paginas<2 || Number.isInteger(paginas)) {
-            throw new Error("El número de paginas es invalido");
-        }
-        this.titulo=titulo;
-        this.autor=autor;
-        this.paginas=paginas;
-    }
 
-    describir(){
-        document.body.innerHTML+=("<h1>"+this.titulo+"</h1>");
-        document.body.innerHTML+=("<p>"+this.autor+"</p>");
-        document.body.innerHTML+=("<p>"+this.paginas+"</p>");
-    
-    }
-    
-    
-}
 
-const libro = new Libro(undefined,null,568);
+const libro = new Libro("Tres enanos y pico","Angel Sanchidrian",568);
+const libro299 = new Libro("Libro corto", "Ana", 299);
+const libro300 = new Libro("Libro extenso", "Luis", 300);
 libro.describir();
 
-class Catalogo{
-    constructor(...libros){
+libro299.describir();
+libro300.describir();
 
-    }
-};
+document.body.innerHTML+="<h1>CATALOGO</h1>"
+const catalogo= new Catalogo();
+catalogo.addLibro(libro);
+catalogo.addLibro(libro299);
+document.body.innerHTML+=`<p>Libros registrados: ${catalogo.libros.size}</p>`
+catalogo.consultarLibro("Libro corto");
+catalogo.consultarLibro("Camino de los reyes");
+catalogo.eliminarLibro("Libro corto");
+catalogo.consultarLibro("Libro corto");
+catalogo.listarLibros();
