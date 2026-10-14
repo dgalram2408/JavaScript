@@ -34,6 +34,7 @@ document.body.innerHTML+="<h1>CATALOGO</h1>"
 const catalogo= new Catalogo();
 catalogo.addLibro(libro);
 catalogo.addLibro(libro299);
+catalogo.addLibro(libro299);
 document.body.innerHTML+=`<p>Libros registrados: ${catalogo.libros.size}</p>`
 catalogo.consultarLibro("Libro corto");
 catalogo.consultarLibro("Camino de los reyes");

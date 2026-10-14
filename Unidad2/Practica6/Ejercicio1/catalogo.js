@@ -5,12 +5,18 @@ class Catalogo{
 
     addLibro(libro){
         if (!(libro instanceof Libro)) {
-           throw new Error("El objeto no es un libro válido");
+           return console.error("El objeto no es un libro válido");
         }
-
-        if (this.libros.has(libro.titulo)) {
-            throw new Error("Ya existe un libro con ese título");
+        //TODO Comprobar problema de bucle
+        for (let comprobador in this.libros) {
+            if (comprobador.titulo === libro.titulo) {
+                return console.error("Ya existe un libro con");
+            }
+            
         }
+        /*if (this.libros.has(libro.titulo)) {
+            
+        }*/
 
         this.libros.set(libro.titulo, libro);
     }
