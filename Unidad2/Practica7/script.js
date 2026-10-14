@@ -21,4 +21,4 @@ const sinimagen=JSON.parse(
 ));
 document.body.innerHTML+="<h2>Ficha en formato JSON<h2>";
 
-document.body.innerHTML+="<pre>"
+document.body.innerHTML+="<pre>"+JSON.stringify(sinimagen,null,2)+"</pre>"
