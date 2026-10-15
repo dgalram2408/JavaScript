@@ -20,5 +20,6 @@ const sinimagen=JSON.parse(
     }
 ));
 document.body.innerHTML+="<h2>Ficha en formato JSON<h2>";
-
+console.log(`Ficha recuperada:`,sinimagen);
+console.log("¿Incluye imagen? "+("imagen"in sinimagen));
 document.body.innerHTML+="<pre>"+JSON.stringify(sinimagen,null,2)+"</pre>"
