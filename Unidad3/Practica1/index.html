@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .status {
+      font-weight: bold;
+      color: #007bff;
+      margin-top: 1rem;
+    }
+  </style>
+<body>
+    
+    <div class="card">
+    <h1>Panel de Control por Voz</h1>
+    <p id="texto">Di ordenes como: <strong>"Rojo"</strong>, <strong>"Verde"</strong>, <strong>"Azul"</strong> o <strong>"Restablecer"</strong>.</p>
+    <button id="btnStart">Activar Micrófono</button>
+    <p class="status" id="statusText">Estado: Inactivo</p>
+    <p>Último comando detectado: <span id="commandText">-</span></p>
+  </div>
 
+    <script src="script.js"></script>
+</body>
+</html>
